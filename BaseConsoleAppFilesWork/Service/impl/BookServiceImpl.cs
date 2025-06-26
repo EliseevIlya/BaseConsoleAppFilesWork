@@ -4,54 +4,65 @@ namespace BaseConsoleAppFilesWork.Service.impl;
 
 public class BookServiceImpl : IBookService
 {
-    public Book? GetBookById(List<Book?> books, int id)
+    private readonly IRepository<Book> _repository;
+
+    public BookServiceImpl(IRepository<Book> repository)
     {
-        return books.FirstOrDefault(b => b != null && b.BookId == id);
+        _repository = repository;
+    }
+
+
+    public Book? GetBookById(int id)
+    {
+        return _repository.GetById(id);
     }
 
     public List<Book> GetBooks(List<Book> books)
     {
-        return books;
+        return _repository.GetAll();
     }
 
-    public List<Book> AddBook(List<Book> books, Book book)
+    public List<Book> AddBook(Book book)
     {
-        books.Add(book);
-        return books;
+        _repository.Add(book);
+        return _repository.GetAll();
     }
 
-    public List<Book> UpdateBook(List<Book> books, Book book)
+    public List<Book> UpdateBook(Book updatedBook)
     {
-        var existingBook = books.FirstOrDefault(b => b.BookId == book.BookId);
-        if (existingBook != null)
+        var existingBook = _repository.GetById(updatedBook.BookId);
+        if (existingBook == null)
         {
-            existingBook.Title = book.Title;
-            existingBook.Author = book.Author;
-            existingBook.Description = book.Description;
-            existingBook.IsAvailable = book.IsAvailable;
+            Console.WriteLine("Book not found");
+            return _repository.GetAll();
         }
-        return books;
+       
+        existingBook.Title = updatedBook.Title;
+        existingBook.Author = updatedBook.Author;
+        existingBook.Description = updatedBook.Description;
+        existingBook.IsAvailable = updatedBook.IsAvailable;
+        return _repository.GetAll();
     }
 
-    public List<Book> DeleteBook(List<Book> books, int id)
+    public List<Book> DeleteBook(int id)
     {
-        books.Remove(books.FirstOrDefault(b => b.BookId == id));
-        return books;
+        _repository.DeleteById(id);
+        return _repository.GetAll();
     }
 
-    public bool BookExists(List<Book> books, int id)
+    public bool BookExists(int id)
     {
-        var book = books.FirstOrDefault(b => b.BookId == id);
+        var book = _repository.GetById(id);
         return book is { IsAvailable: true };
     }
 
-    public List<Book> SetBookStatus(List<Book> books, int id, bool status)
+    public List<Book> SetBookStatus(int id, bool status)
     {   
-        var book = books.FirstOrDefault(b => b.BookId == id);
+        var book = _repository.GetById(id);
         if (book != null)
         {
             book.IsAvailable = status;
         }
-        return books;
+        return _repository.GetAll();
     }
 }
