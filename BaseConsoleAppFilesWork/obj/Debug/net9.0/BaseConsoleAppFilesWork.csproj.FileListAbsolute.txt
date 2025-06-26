@@ -1,0 +1,14 @@
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\bin\Debug\net9.0\BaseConsoleAppFilesWork.exe
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\bin\Debug\net9.0\BaseConsoleAppFilesWork.deps.json
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\bin\Debug\net9.0\BaseConsoleAppFilesWork.runtimeconfig.json
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\bin\Debug\net9.0\BaseConsoleAppFilesWork.dll
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\bin\Debug\net9.0\BaseConsoleAppFilesWork.pdb
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\BaseConsoleAppFilesWork.GeneratedMSBuildEditorConfig.editorconfig
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\BaseConsoleAppFilesWork.AssemblyInfoInputs.cache
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\BaseConsoleAppFilesWork.AssemblyInfo.cs
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\BaseConsoleAppFilesWork.csproj.CoreCompileInputs.cache
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\BaseConsoleAppFilesWork.dll
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\refint\BaseConsoleAppFilesWork.dll
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\BaseConsoleAppFilesWork.pdb
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\BaseConsoleAppFilesWork.genruntimeconfig.cache
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\ref\BaseConsoleAppFilesWork.dll
