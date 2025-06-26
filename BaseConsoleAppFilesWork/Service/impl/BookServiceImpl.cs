@@ -17,7 +17,7 @@ public class BookServiceImpl : IBookService
         return _repository.GetById(id);
     }
 
-    public List<Book> GetBooks(List<Book> books)
+    public List<Book> GetAllBooks()
     {
         return _repository.GetAll();
     }
@@ -30,7 +30,7 @@ public class BookServiceImpl : IBookService
 
     public List<Book> UpdateBook(Book updatedBook)
     {
-        var existingBook = _repository.GetById(updatedBook.BookId);
+        var existingBook = _repository.GetById(updatedBook.Id);
         if (existingBook == null)
         {
             Console.WriteLine("Book not found");
