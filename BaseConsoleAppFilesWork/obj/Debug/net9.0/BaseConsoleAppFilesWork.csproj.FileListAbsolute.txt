@@ -12,3 +12,4 @@ D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\De
 D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\BaseConsoleAppFilesWork.pdb
 D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\BaseConsoleAppFilesWork.genruntimeconfig.cache
 D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\ref\BaseConsoleAppFilesWork.dll
+D:\CSharp\BaseAppFileWork\BaseConsoleAppFilesWork\BaseConsoleAppFilesWork\obj\Debug\net9.0\BaseConsoleAppFilesWork.sourcelink.json
