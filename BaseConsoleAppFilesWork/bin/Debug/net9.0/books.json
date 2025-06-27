@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "Title": "C# 10",
+    "Author": "Troelsen",
+    "Description": "",
+    "IsAvailable": true
+  },
+  {
+    "Id": 2,
+    "Title": "CLR via C#",
+    "Author": "Richter",
+    "Description": "",
+    "IsAvailable": true
+  },
+  {
+    "Id": 3,
+    "Title": "C\u002B\u002B",
+    "Author": "Richter",
+    "Description": "",
+    "IsAvailable": true
+  }
+]
