@@ -5,7 +5,7 @@ namespace BaseConsoleAppFilesWork.Service.impl;
 public class UserServiceImpl : IUserService
 {
     private readonly IRepository<User> _userRepository;
-    private readonly BookServiceImpl _bookServiceImpl;
+    private readonly IBookService _bookServiceImpl;
 
     public UserServiceImpl(IRepository<User> userRepository, BookServiceImpl bookServiceImpl)
     {
