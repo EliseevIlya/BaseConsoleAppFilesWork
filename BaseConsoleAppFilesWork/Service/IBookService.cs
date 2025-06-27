@@ -11,4 +11,6 @@ public interface IBookService
     public List<Book>  DeleteBook(int id);
     public bool BookExists(int id);
     public List<Book> SetBookStatus(int id,bool status);
+    void SaveBooksToJson(string filePath);
+    void ReadBooksFromJson(string filePath);
 }

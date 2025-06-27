@@ -16,8 +16,10 @@ bookService.AddBook(new Book { Id = 3, Title = "C++", Author = "Richter" });
 usersService.AddUser(new User { Id = 1, Name = "Anton",Email = "anton@gmail.com" });
 usersService.AddUser(new User { Id = 2, Name = "Denis",Email = "denis@gmail.com" });
 
-// Обновление книги
+// Сохранение книг в JSON
+bookService.SaveBooksToJson("books.json");
 
+// Обновление книги
 Book updateBook = new Book { Id = 1, Title = "C# 12 (обновлено)", Author = "Troelsen" };
 bookService.UpdateBook(updateBook);
 
@@ -69,4 +71,12 @@ Console.WriteLine("\nВывод всех пользователей после �
 foreach (var user in usersService.GetAllUsers())
 {
     Console.WriteLine($"{user.Id}: {user.Name} - {user.Email}");
+}
+
+//Загрузка книг из JSON
+bookService.ReadBooksFromJson("books.json");
+Console.WriteLine("Список книг:");
+foreach (var b in bookService.GetAllBooks())
+{
+    Console.WriteLine($"{b.Id}: {b.Title} - {b.Author}");
 }

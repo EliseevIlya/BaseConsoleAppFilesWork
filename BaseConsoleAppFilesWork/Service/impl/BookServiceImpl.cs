@@ -1,3 +1,4 @@
+using System.Text.Json;
 using BaseConsoleAppFilesWork.Entity;
 
 namespace BaseConsoleAppFilesWork.Service.impl;
@@ -64,5 +65,41 @@ public class BookServiceImpl : IBookService
             book.IsAvailable = status;
         }
         return _repository.GetAll();
+    }
+
+    public void SaveBooksToJson(string filePath)
+    {
+        List<Book> books = _repository.GetAll();
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        string json = JsonSerializer.Serialize(books, options);
+        File.WriteAllText(filePath, json);
+        Console.WriteLine($"Books saved to {filePath}");
+    }
+
+    public void ReadBooksFromJson(string filePath)
+    {
+        if (!File.Exists(filePath))
+        {
+            Console.WriteLine("File not found");
+            return;
+        }
+        string json = File.ReadAllText(filePath);
+        var loadedBooks = JsonSerializer.Deserialize<List<Book>>(json);
+        if (loadedBooks == null)
+        {
+            Console.WriteLine("No Books");
+            return;
+        }
+
+        foreach (var book in loadedBooks)
+        {
+            if (_repository.GetById(book.Id) == null)
+            {
+                _repository.Add(book);
+                
+            }
+        }
+
+        Console.WriteLine($"Books loaded from {filePath}");
     }
 }
